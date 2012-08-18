@@ -26,12 +26,17 @@ ThirdViewController *thirdViewController = [[ThirdViewController alloc] initWith
 [self setViewControllers:@[firstViewController,secondViewController,thirdViewController]];
 ```
 
-### 3. Insert the segmented control into the desired view (e.g. UINavigationController's titleView, UIToolbar item, as a subview of another UIView, etc.)
+### 3. Insert the segmented control into the desired view
 
 ```objective-c
 self.navigationItem.titleView = self.segmentedControl;
 ```
 
+The segmented control can be placed in any view.
+
+* As the titleView property of a UINavigationController
+* As a UIBarButtonItem in a UIToolbar
+* As subview of another view
 
 ## Documentation
 
