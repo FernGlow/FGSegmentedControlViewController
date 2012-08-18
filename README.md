@@ -1,7 +1,6 @@
 [FGSegmentedControlViewController](http://fernglow.github.com/FGSegmentedControlViewController/Documentation/html/Classes/FGSegmentedControlViewController.html) is a container view controller that manages view controllers through a [UISegmentedControl](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UISegmentedControl_Class/Reference/UISegmentedControl.html).
 
-## FGSegmentedControlViewController In Action
-
+## Screenshots
 
 ![FGSegmentedControlViewController](http://fernglow.github.com/FGSegmentedControlViewController/images/FGSegmentedControlViewController.gif)
 
