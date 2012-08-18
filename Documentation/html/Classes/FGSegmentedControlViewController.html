@@ -46,13 +46,16 @@
 	
 	<option value="//api/name/selectedViewController">&nbsp;&nbsp;&nbsp;&nbsp;selectedViewController</option>
 	
-	<option value="//api/name/switchingViewControllers">&nbsp;&nbsp;&nbsp;&nbsp;switchingViewControllers</option>
-	
 	<option value="//api/name/viewControllers">&nbsp;&nbsp;&nbsp;&nbsp;viewControllers</option>
 	
 	
 	
 	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/isSwitchingViewControllers">&nbsp;&nbsp;&nbsp;&nbsp;- isSwitchingViewControllers</option>
 	
 	
 	
@@ -67,6 +70,14 @@
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing the Segmented Control Controller Properties">Accessing the Segmented Control Controller Properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing the View Controllers">Managing the View Controllers</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Manging the Selected Segment">Manging the Selected Segment</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Testing for View Controller Transition">Testing for View Controller Transition</a></span></li>
 	
 </ul></li>
 
@@ -84,8 +95,6 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectedViewController">selectedViewController</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/switchingViewControllers">switchingViewControllers</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewControllers">viewControllers</a></span></li>
 	
 </ul></li>
@@ -93,6 +102,12 @@
 
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isSwitchingViewControllers">isSwitchingViewControllers</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
@@ -133,51 +148,75 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Accessing the Segmented Control Controller Properties" name="task_Accessing the Segmented Control Controller Properties"></a>
+						<h3 class="subsubtitle task-title">Accessing the Segmented Control Controller Properties</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
-		
+		<span class="tooltip"><p>The segmented control controller’s delegate object.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/segmentedControl">&nbsp;&nbsp;segmentedControl</a></code>
-		
+		<span class="tooltip"><p>The segmented control associated with this controller. (read-only)</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/switchingViewControllers">&nbsp;&nbsp;switchingViewControllers</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Managing the View Controllers" name="task_Managing the View Controllers"></a>
+						<h3 class="subsubtitle task-title">Managing the View Controllers</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/viewControllers">&nbsp;&nbsp;viewControllers</a></code>
-		
+		<span class="tooltip"><p>An array of the root view controllers displayed by the segmented control.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Manging the Selected Segment" name="task_Manging the Selected Segment"></a>
+						<h3 class="subsubtitle task-title">Manging the Selected Segment</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/selectedViewController">&nbsp;&nbsp;selectedViewController</a></code>
-		
+		<span class="tooltip"><p>The view controller associated with the currently selected segment.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/selectedIndex">&nbsp;&nbsp;selectedIndex</a></code>
-		
+		<span class="tooltip"><p>The index of the view controller associated with the currently selected segment.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Testing for View Controller Transition" name="task_Testing for View Controller Transition"></a>
+						<h3 class="subsubtitle task-title">Testing for View Controller Transition</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isSwitchingViewControllers">&ndash;&nbsp;isSwitchingViewControllers</a></code>
+		<span class="tooltip"><p>Returns YES if the controller is in the process of switching view controllers, otherwise returns NO.</p></span>
+	</span>
+	
 	
 </li>
 						</ul>
@@ -197,10 +236,44 @@
 	<h3 class="subsubtitle method-title">delegate</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The segmented control controller’s delegate object.</p>
+	</div>		
+	
+    
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;FGSegmentedControlViewControllerDelegate&gt; delegate</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;FGSegmentedControlViewControllerDelegate&gt; delegate</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Protocols/FGSegmentedControlViewControllerDelegate.html">FGSegmentedControlViewControllerDelegate</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FGSegmentedControlViewController.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -208,10 +281,35 @@
 	<h3 class="subsubtitle method-title">segmentedControl</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The segmented control associated with this controller. (read-only)</p>
+	</div>		
+	
+    
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UISegmentedControl *segmentedControl</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UISegmentedControl *segmentedControl</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FGSegmentedControlViewController.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -219,10 +317,41 @@
 	<h3 class="subsubtitle method-title">selectedIndex</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The index of the view controller associated with the currently selected segment.</p>
+	</div>		
+	
+    
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic) NSUInteger selectedIndex</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSUInteger selectedIndex</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Setting this property changes the selected view controller to the one at the designated index in the <a href="#//api/name/viewControllers">viewControllers</a> array.
+The default value of this property is 0.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FGSegmentedControlViewController.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -230,21 +359,40 @@
 	<h3 class="subsubtitle method-title">selectedViewController</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The view controller associated with the currently selected segment.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UIViewController *selectedViewController</code></div>
 
     
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/switchingViewControllers" title="switchingViewControllers"></a>
-	<h3 class="subsubtitle method-title">switchingViewControllers</h3>
 	
 	
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, getter=isSwitchingViewControllers) BOOL switchingViewControllers</code></div>
-
-    
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Changing the view controller also updates the <a href="#//api/name/selectedIndex">selectedIndex</a> property accordingly. The default value of this property is nil.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FGSegmentedControlViewController.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -252,10 +400,43 @@
 	<h3 class="subsubtitle method-title">viewControllers</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>An array of the root view controllers displayed by the segmented control.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *viewControllers</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>When configuring a segmented control controller, you can use this property to specify the content for
+each segment of the segmented controller. The order of the view controllers in the array corresponds
+to the display order in the segmented control. Thus, the controller at index 0 corresponds to the left-most
+segment, the controller at index 1 the next segment to the right, and so on. The default value of this property is nil.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FGSegmentedControlViewController.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>
@@ -263,6 +444,48 @@
 					
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/isSwitchingViewControllers" title="isSwitchingViewControllers"></a>
+	<h3 class="subsubtitle method-title">isSwitchingViewControllers</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns YES if the controller is in the process of switching view controllers, otherwise returns NO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isSwitchingViewControllers</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FGSegmentedControlViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 				</div>
@@ -275,7 +498,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Fern Glow, LLC. All rights reserved. (Last updated: 2012-08-17)</span><br />
+						<p><span class="copyright">&copy; 2012 Fern Glow, LLC. All rights reserved. (Last updated: 2012-08-18)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

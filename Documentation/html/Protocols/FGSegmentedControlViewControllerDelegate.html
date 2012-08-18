@@ -124,14 +124,16 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/segmentedViewController:willSwitchFromViewController:atIndex:toViewController:atIndex:">&ndash;&nbsp;segmentedViewController:willSwitchFromViewController:atIndex:toViewController:atIndex:</a></code>
-		
+		<span class="tooltip"><p>Tells the delegate that a segment in the segmented control was selected and that the controller
+will switch controllers.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/segmentedViewController:didSwitchFromViewController:atIndex:toViewController:atIndex:">&ndash;&nbsp;segmentedViewController:didSwitchFromViewController:atIndex:toViewController:atIndex:</a></code>
-		
+		<span class="tooltip"><p>Tells the delegate that a segment in the segmented control was selected and that the controller
+has switched controllers.</p></span>
 	</span>
 	
 	
@@ -157,10 +159,69 @@
 	<h3 class="subsubtitle method-title">segmentedViewController:didSwitchFromViewController:atIndex:toViewController:atIndex:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that a segment in the segmented control was selected and that the controller
+has switched controllers.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (void)segmentedViewController:(FGSegmentedControlViewController *)<em>segmentedControlViewController</em> didSwitchFromViewController:(UIViewController *)<em>fromViewController</em> atIndex:(NSInteger)<em>fromIndex</em> toViewController:(UIViewController *)<em>toViewController</em> atIndex:(NSInteger)<em>toIndex</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>segmentedControlViewController</em></dt>
+			<dd><p>The segmented control controller containing the viewControllers.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fromViewController</em></dt>
+			<dd><p>The view controller that was previously selected</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fromIndex</em></dt>
+			<dd><p>The index of the view controller that was previously selected</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>toViewController</em></dt>
+			<dd><p>The view controller currently selected</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>toIndex</em></dt>
+			<dd><p>The index of the view controller that is currently selected</p>
+
+<p>This is trigged via a user interacting with the segmented control or by programmatically selecting
+a segment in the segmented control using &ndash;(void)setSelectedIndex:</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FGSegmentedControlViewController.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -168,10 +229,70 @@
 	<h3 class="subsubtitle method-title">segmentedViewController:willSwitchFromViewController:atIndex:toViewController:atIndex:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that a segment in the segmented control was selected and that the controller
+will switch controllers.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (void)segmentedViewController:(FGSegmentedControlViewController *)<em>segmentedControlViewController</em> willSwitchFromViewController:(UIViewController *)<em>fromViewController</em> atIndex:(NSInteger)<em>fromIndex</em> toViewController:(UIViewController *)<em>toViewController</em> atIndex:(NSInteger)<em>toIndex</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>segmentedControlViewController</em></dt>
+			<dd><p>The segmented control controller containing the viewControllers.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fromViewController</em></dt>
+			<dd><p>The view controller that is currently selected</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fromIndex</em></dt>
+			<dd><p>The index of the view controller that is currently selected</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>toViewController</em></dt>
+			<dd><p>The view controller that will be selected</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>toIndex</em></dt>
+			<dd><p>The index of the view controller that will be selected selected</p>
+
+<p>Immediately after control flow returns to the segmented control controller, the view controllers will be
+switched.  This is trigged via a user interacting with the segmented control or by programmatically selecting
+a segment in the segmented control using &ndash;(void)setSelectedIndex:</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">FGSegmentedControlViewController.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>
@@ -187,7 +308,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Fern Glow, LLC. All rights reserved. (Last updated: 2012-08-17)</span><br />
+						<p><span class="copyright">&copy; 2012 Fern Glow, LLC. All rights reserved. (Last updated: 2012-08-18)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

@@ -13,10 +13,15 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FGSegmentedControlViewController/setDelegate:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">The segmented control controller’s delegate object.</Abstract>
 			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, assign) id&lt;FGSegmentedControlViewControllerDelegate&gt; delegate</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/intf/FGSegmentedControlViewControllerDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, weak) id&lt;FGSegmentedControlViewControllerDelegate&gt; delegate</Declaration>
 			
 			
 			<Anchor>//api/name/delegate</Anchor>
@@ -24,10 +29,15 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FGSegmentedControlViewController/delegate</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">The segmented control controller’s delegate object.</Abstract>
 			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, assign) id&lt;FGSegmentedControlViewControllerDelegate&gt; delegate</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/intf/FGSegmentedControlViewControllerDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, weak) id&lt;FGSegmentedControlViewControllerDelegate&gt; delegate</Declaration>
 			
 			
 			<Anchor>//api/name/delegate</Anchor>
@@ -35,10 +45,10 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FGSegmentedControlViewController/setSegmentedControl:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">The segmented control associated with this controller. (read-only)</Abstract>
 			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, strong) UISegmentedControl *segmentedControl</Declaration>
+			<Declaration>@property (nonatomic, strong, readonly) UISegmentedControl *segmentedControl</Declaration>
 			
 			
 			<Anchor>//api/name/segmentedControl</Anchor>
@@ -46,40 +56,18 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FGSegmentedControlViewController/segmentedControl</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">The segmented control associated with this controller. (read-only)</Abstract>
 			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, strong) UISegmentedControl *segmentedControl</Declaration>
+			<Declaration>@property (nonatomic, strong, readonly) UISegmentedControl *segmentedControl</Declaration>
 			
 			
 			<Anchor>//api/name/segmentedControl</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/FGSegmentedControlViewController/setSwitchingViewControllers:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign, getter=isSwitchingViewControllers) BOOL switchingViewControllers</Declaration>
-			
-			
-			<Anchor>//api/name/switchingViewControllers</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/FGSegmentedControlViewController/switchingViewControllers</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, assign, getter=isSwitchingViewControllers) BOOL switchingViewControllers</Declaration>
-			
-			
-			<Anchor>//api/name/switchingViewControllers</Anchor>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FGSegmentedControlViewController/setViewControllers:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">An array of the root view controllers displayed by the segmented control.</Abstract>
 			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, copy) NSArray *viewControllers</Declaration>
@@ -90,7 +78,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FGSegmentedControlViewController/viewControllers</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">An array of the root view controllers displayed by the segmented control.</Abstract>
 			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, copy) NSArray *viewControllers</Declaration>
@@ -101,7 +89,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FGSegmentedControlViewController/setSelectedViewController:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">The view controller associated with the currently selected segment.</Abstract>
 			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, assign) UIViewController *selectedViewController</Declaration>
@@ -112,7 +100,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FGSegmentedControlViewController/selectedViewController</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">The view controller associated with the currently selected segment.</Abstract>
 			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic, assign) UIViewController *selectedViewController</Declaration>
@@ -123,10 +111,10 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/FGSegmentedControlViewController/setSelectedIndex:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">The index of the view controller associated with the currently selected segment.</Abstract>
 			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic) NSUInteger selectedIndex</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger selectedIndex</Declaration>
 			
 			
 			<Anchor>//api/name/selectedIndex</Anchor>
@@ -134,13 +122,24 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/FGSegmentedControlViewController/selectedIndex</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">The index of the view controller associated with the currently selected segment.</Abstract>
 			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic) NSUInteger selectedIndex</Declaration>
+			<Declaration>@property (nonatomic, assign) NSUInteger selectedIndex</Declaration>
 			
 			
 			<Anchor>//api/name/selectedIndex</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FGSegmentedControlViewController/isSwitchingViewControllers</TokenIdentifier>
+			<Abstract type="html">Returns YES if the controller is in the process of switching view controllers, otherwise returns NO.</Abstract>
+			<DeclaredIn>FGSegmentedControlViewController.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isSwitchingViewControllers</Declaration>
+			
+			
+			<Anchor>//api/name/isSwitchingViewControllers</Anchor>
 		</Token>
 		
 	</File>
