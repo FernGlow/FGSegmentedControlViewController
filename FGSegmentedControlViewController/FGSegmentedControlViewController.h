@@ -27,7 +27,7 @@
 
 @protocol FGSegmentedControlViewControllerDelegate <NSObject>
 @optional
-/*
+/**
  Tells the delegate that a segment in the segmented control was selected and that the controller
  will switch controllers.
  
@@ -41,7 +41,7 @@
  switched.  This is trigged via a user interacting with the segmented control or by programmatically selecting
  a segment in the segmented control using -(void)setSelectedIndex:
  
- **/
+ */
 - (void)segmentedViewController:(FGSegmentedControlViewController *)segmentedControlViewController
    willSwitchFromViewController:(UIViewController *)fromViewController
 						atIndex:(NSInteger)fromIndex
@@ -49,7 +49,7 @@
 						atIndex:(NSInteger)toIndex;
 
 
-/*
+/**
  Tells the delegate that a segment in the segmented control was selected and that the controller
  has switched controllers.
  
@@ -61,7 +61,7 @@
  
  This is trigged via a user interacting with the segmented control or by programmatically selecting
  a segment in the segmented control using -(void)setSelectedIndex:
- **/
+ */
 - (void)segmentedViewController:(FGSegmentedControlViewController *)segmentedControlViewController
    didSwitchFromViewController:(UIViewController *)fromViewController
 						atIndex:(NSInteger)fromIndex
@@ -72,48 +72,68 @@
 
 @interface FGSegmentedControlViewController : UIViewController
 
-/*
+/**
+ @name Accessing the Segmented Control Controller Properties
+ */
+
+/**
  The segmented control controller’s delegate object.
- **/
-@property (nonatomic, assign) id<FGSegmentedControlViewControllerDelegate>delegate;
+ 
+ @see FGSegmentedControlViewControllerDelegate
+ */
+@property (nonatomic, weak) id<FGSegmentedControlViewControllerDelegate>delegate;
 
 
-/*
+/**
  The segmented control associated with this controller. (read-only)
- **/
-@property (nonatomic, strong) UISegmentedControl *segmentedControl;
+ */
+@property (nonatomic, strong, readonly) UISegmentedControl *segmentedControl;
 
+/**
+ @name Managing the View Controllers
+ */
 
-/*
- Returns YES is the controller is in the process of switching view controllers, otherwise returns NO.
- **/
-@property (nonatomic, assign, getter = isSwitchingViewControllers) BOOL switchingViewControllers;
-
-
-/*
+/**
  An array of the root view controllers displayed by the segmented control.
  
  When configuring a segmented control controller, you can use this property to specify the content for
  each segment of the segmented controller. The order of the view controllers in the array corresponds
  to the display order in the segmented control. Thus, the controller at index 0 corresponds to the left-most
  segment, the controller at index 1 the next segment to the right, and so on. The default value of this property is nil.
- **/
+ */
 @property(nonatomic, copy) NSArray *viewControllers;
 
 
-/*
+/**
+ @name Manging the Selected Segment
+ */
+
+/**
  The view controller associated with the currently selected segment.
  
  Changing the view controller also updates the selectedIndex property accordingly. The default value of this property is nil.
- 
- **/
+ */
 @property(nonatomic, assign) UIViewController *selectedViewController;
 
 
-/*
+/**
  The index of the view controller associated with the currently selected segment.
- **/
-@property(nonatomic) NSUInteger selectedIndex;
+ 
+ Setting this property changes the selected view controller to the one at the designated index in the viewControllers array.
+ The default value of this property is 0.
+ */
+@property (nonatomic, assign) NSUInteger selectedIndex;
+
+
+/**
+ @name Testing for View Controller Transition
+ */
+
+/**
+ Returns YES if the controller is in the process of switching view controllers, otherwise returns NO.
+ */
+- (BOOL)isSwitchingViewControllers;
+
 
 @end
 

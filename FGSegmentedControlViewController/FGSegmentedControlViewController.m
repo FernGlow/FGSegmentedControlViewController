@@ -26,8 +26,10 @@
 #define ASSERT_INDEX_IS_WITHIN_BOUNDS(idx,array) NSAssert2(idx >= 0 && idx <= (self.array.count-1), @"index %d beyond bounds [0 .. %d]", idx, (self.array.count-1))
 
 @interface FGSegmentedControlViewController ()
+@property (nonatomic, strong, readwrite) UISegmentedControl *segmentedControl;
 @property (nonatomic, strong) NSMutableArray *childViewControllers;
 @property (nonatomic, assign) NSInteger previouslySelectedIndex;
+@property (nonatomic, assign, getter = isSwitchingViewControllers) BOOL switchingViewControllers;
 @end
 
 @implementation FGSegmentedControlViewController

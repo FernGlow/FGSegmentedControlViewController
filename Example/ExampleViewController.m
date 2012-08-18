@@ -26,7 +26,7 @@
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
 
-#define USE_TOOLBAR_INSTEAD_OF_NAVIGATION_BAR_TITLE_VIEW 1
+#define USE_TOOLBAR_INSTEAD_OF_NAVIGATION_BAR_TITLE_VIEW 0
 
 @implementation ExampleViewController
 
