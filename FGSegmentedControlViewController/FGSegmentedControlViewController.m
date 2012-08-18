@@ -135,7 +135,7 @@
 {
 	ASSERT_INDEX_IS_WITHIN_BOUNDS(index,self.childViewControllers);
 	UIViewController *childViewController = self.childViewControllers[index];
-	return (childViewController != nil) ? childViewController : nil;
+	return childViewController;
 }
 
 #pragma mark - View Controller Visibility
