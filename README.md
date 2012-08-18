@@ -17,19 +17,19 @@
 ### 2. Set the view controllers you want to manage with a segmented control
 
 ```objective-c
-	// Create view controllers to switch between
-	FirstViewController *firstViewController = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:[NSBundle mainBundle]];
-	SecondViewController *secondViewController = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:[NSBundle mainBundle]];
-	ThirdViewController *thirdViewController = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:[NSBundle mainBundle]];
-	
-	// Set root view controllers
-	[self setViewControllers:@[firstViewController,secondViewController,thirdViewController]];
+// Create view controllers to switch between
+FirstViewController *firstViewController = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:[NSBundle mainBundle]];
+SecondViewController *secondViewController = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:[NSBundle mainBundle]];
+ThirdViewController *thirdViewController = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:[NSBundle mainBundle]];
+
+// Set root view controllers
+[self setViewControllers:@[firstViewController,secondViewController,thirdViewController]];
 ```
 
 ### 3. Insert the segmented control into the desired view (e.g. UINavigationController's titleView, UIToolbar item, as a subview of another UIView, etc.)
 
 ```objective-c
-	self.navigationItem.titleView = self.segmentedControl;
+self.navigationItem.titleView = self.segmentedControl;
 ```
 
 
