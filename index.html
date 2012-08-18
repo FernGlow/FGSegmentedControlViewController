@@ -52,18 +52,18 @@
 
 <h3>2. Set the view controllers you want to manage with a segmented control</h3>
 
-<div class="highlight"><pre>    <span class="c1">// Create view controllers to switch between</span>
-    <span class="n">FirstViewController</span> <span class="o">*</span><span class="n">firstViewController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">FirstViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@"FirstViewController"</span> <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
-    <span class="n">SecondViewController</span> <span class="o">*</span><span class="n">secondViewController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">SecondViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@"SecondViewController"</span> <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
-    <span class="n">ThirdViewController</span> <span class="o">*</span><span class="n">thirdViewController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ThirdViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@"ThirdViewController"</span> <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
+<div class="highlight"><pre><span class="c1">// Create view controllers to switch between</span>
+<span class="n">FirstViewController</span> <span class="o">*</span><span class="n">firstViewController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">FirstViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@"FirstViewController"</span> <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
+<span class="n">SecondViewController</span> <span class="o">*</span><span class="n">secondViewController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">SecondViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@"SecondViewController"</span> <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
+<span class="n">ThirdViewController</span> <span class="o">*</span><span class="n">thirdViewController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ThirdViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@"ThirdViewController"</span> <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
 
-    <span class="c1">// Set root view controllers</span>
-    <span class="p">[</span><span class="n">self</span> <span class="nl">setViewControllers:</span><span class="err">@</span><span class="p">[</span><span class="n">firstViewController</span><span class="p">,</span><span class="n">secondViewController</span><span class="p">,</span><span class="n">thirdViewController</span><span class="p">]];</span>
+<span class="c1">// Set root view controllers</span>
+<span class="p">[</span><span class="n">self</span> <span class="nl">setViewControllers:</span><span class="err">@</span><span class="p">[</span><span class="n">firstViewController</span><span class="p">,</span><span class="n">secondViewController</span><span class="p">,</span><span class="n">thirdViewController</span><span class="p">]];</span>
 </pre></div>
 
 <h3>3. Insert the segmented control into the desired view (e.g. UINavigationController's titleView, UIToolbar item, as a subview of another UIView, etc.)</h3>
 
-<div class="highlight"><pre>    <span class="n">self</span><span class="p">.</span><span class="n">navigationItem</span><span class="p">.</span><span class="n">titleView</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">segmentedControl</span><span class="p">;</span>
+<div class="highlight"><pre><span class="n">self</span><span class="p">.</span><span class="n">navigationItem</span><span class="p">.</span><span class="n">titleView</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">segmentedControl</span><span class="p">;</span>
 </pre></div>
 
 <h2>Documentation</h2>
@@ -89,6 +89,6 @@
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
   </body>
 </html>
